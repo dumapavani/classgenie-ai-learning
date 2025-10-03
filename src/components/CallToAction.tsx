@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Sparkles } from "lucide-react";
 
 const CallToAction = () => {
@@ -27,17 +26,21 @@ const CallToAction = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Link to="/chat">
-              <Button variant="hero" size="lg" className="group">
-                Try Now - Free
-              </Button>
-            </Link>
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="group"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Contact Us
+            </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20"
+              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Learn More
+              View Features
             </Button>
           </div>
         </div>
